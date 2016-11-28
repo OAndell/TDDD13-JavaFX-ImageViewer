@@ -1,0 +1,50 @@
+
+
+
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.image.Image?>
+<BorderPane fx:id="borderPane" fx:controller="ImageViewer.ImageViewerController" xmlns:fx="http://javafx.com/fxml" >
+    <top>
+        <ToolBar>
+            <ImageView fx:id="openButton" onMouseClicked="#openImage">
+                <image>
+                    <Image url="@Resources/open.png"/>
+                </image>
+            </ImageView>
+            <ImageView fx:id="rotateLeftView" onMouseClicked="#handleClickLeftRotate">
+                <image>
+                    <Image url="@Resources/rotateLeft.png"/>
+                </image>
+            </ImageView>
+            <ImageView fx:id="rotateRightView" onMouseClicked="#handleClickRightRotate" >
+                <image>
+                    <Image url="@Resources/rotateRight.png"/>
+                </image>
+            </ImageView>
+            <ImageView fx:id="zoomInView" onMouseClicked="#handleZoomIn" >
+                <image>
+                    <Image url="@Resources/plus.png"/>
+                </image>
+            </ImageView>
+            <ImageView  fx:id="zoomOutView" onMouseClicked="#handleZoomOut">
+                <image>
+                    <Image url="@Resources/minus.png"/>
+                </image>
+            </ImageView>
+        </ToolBar>
+    </top>
+    <center>
+        <ImageView fx:id="imageView" onMousePressed="#handleDragEntered" onScroll="#handlScrollOnImage"  onMouseDragged="#handleMouseDrag" ></ImageView>
+    </center>
+</BorderPane>
+
+
+
+
+
+
+
+
+
