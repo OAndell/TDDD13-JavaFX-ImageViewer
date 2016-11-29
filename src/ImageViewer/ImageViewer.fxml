@@ -36,7 +36,7 @@
         </ToolBar>
     </top>
     <center>
-        <ImageView fx:id="imageView" onMousePressed="#handleDragEntered" onScroll="#handlScrollOnImage"  onMouseDragged="#handleMouseDrag" ></ImageView>
+        <ImageView fx:id="imageView" onMousePressed="#handleDragEntered" onScroll="#handleScrollOnImage"  onMouseDragged="#handleMouseDrag" ></ImageView>
     </center>
 </BorderPane>
 
