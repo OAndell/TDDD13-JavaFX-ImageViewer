@@ -37,7 +37,6 @@ public class ImageViewerController {
 
 
     @FXML ImageView imageView;
-    @FXML ImageView zoomOutView;
     @FXML BorderPane borderPane;
 
     /**
@@ -93,14 +92,14 @@ public class ImageViewerController {
 
     /**
      * Handles mouseScrolling on the image.
-     * Zoom out if scrolling forward. Zoom in if scrolling backwards
+     * Zoom in if scrolling forward. Zoom out if scrolling backwards
      */
     @FXML public void handleScrollOnImage(ScrollEvent event) {
         if(event.getDeltaY() > 0){ //scrolling forward
-            handleZoomOut(event);
+            handleZoomIn(event);
         }
         if(event.getDeltaY() < 0){//scrolling backward
-            handleZoomIn(event);
+            handleZoomOut(event);
         }
     }
 
